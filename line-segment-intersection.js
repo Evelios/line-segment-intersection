@@ -25,7 +25,7 @@ module.exports = function intersection(line1, line2) {
 
   const det = A1 * B2 - A2 * B1;
   if (fequals(det, 0)) {
-    return null;
+    return [];
   }
   else {
     const x = (B2 * C1 - B1 * C2) / det;
@@ -45,7 +45,7 @@ module.exports = function intersection(line1, line2) {
       return [x, y];
     }
   }
-  return false;
+  return [];
 
   /**
    * Compare two floating point numbers for equality
